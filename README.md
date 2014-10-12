@@ -28,3 +28,6 @@ The protocol should have the following functions:
 
 The data types of the paramters of R functions ar represented like this:
 
+
+#### example code of protocol and 2 implementors
+Can be found here: [usecase.md](usecase.md)
