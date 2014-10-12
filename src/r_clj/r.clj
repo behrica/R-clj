@@ -20,9 +20,12 @@
 
 
 
+;a protocoll on how to intercat with R from Clojure
 
 (defprotocol R
   (R-call-function [_ execution-context package-name function-name parameters]))
+
+
 
 ;implementation of protocol R via opencpu-clj
 (defrecord ocpu []
@@ -39,6 +42,8 @@
     (r-eval (make-call-string package-name function-name parameters))))
 
 
+
+;implementation of protocol R via jvmr
 (defrecord jvmr []
   R
   (R-call-function [_ execution-context package-name function-name parameters]
@@ -49,7 +54,7 @@
 
 
 
-      ;; define a function, which can be called by passing an implementor of the R protocoll
+ ; define a function, which can be called by passing an implementor of the R protocoll
 (defn r-seq [ctx from to]
   (R-call-function (:r ctx) ctx "base" "seq" {:from from :to to}))
 
