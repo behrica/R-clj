@@ -1,4 +1,4 @@
-A complete example of such a protocol is this:
+An example of such a protocol is this:
 
 ````clojure
 (ns r-clj.r

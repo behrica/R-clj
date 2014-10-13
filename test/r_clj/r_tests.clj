@@ -1,8 +1,6 @@
 (ns r-clj.r-tests
   (:require [midje.sweet :refer [fact facts tabular]]
-            [r-clj.r :refer :all]
-
-            ))
+            [r-clj.r :refer :all]))
 
 
 
@@ -18,5 +16,4 @@ R-rincanter)
          ?r           ?expected
          R-ocpu       [1 1.5 2 2.5 3]
          R-jvmr       [1.0 1.5 2.0 2.5 3.0]
-         R-rincanter  [1.0 1.5 2.0 2.5 3.0]
-         )
+         R-rincanter  [1.0 1.5 2.0 2.5 3.0])
